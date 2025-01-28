@@ -1,0 +1,164 @@
+/* General Styles */
+.popup-container {
+    width: 380px;
+    padding: 25px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #f9f9f9, #e6e6e6);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+/* Button Styles */
+.analyze-button {
+    padding: 14px 24px;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.analyze-button.loading {
+    pointer-events: none; /* Disable button during loading */
+    background: linear-gradient(135deg, #45a049, #4CAF50);
+}
+
+.analyze-button.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.analyze-button:hover {
+    background: linear-gradient(135deg, #45a049, #4CAF50);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.analyze-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gauge Container Styles */
+.gauge-container {
+    position: relative;
+    max-width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.needle {
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #2c3e50;
+    top: 40%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: rotate(-90deg);
+    border-radius: 4px;
+    transition: transform 0.5s ease;
+}
+
+.score-label {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+#scoreValue {
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+/* Info Section Styles */
+.info-section {
+    margin-top: 25px;
+    text-align: left;
+    padding: 15px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.info-section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Chart Styles */
+#gaugeChart {
+    margin: 0 auto;
+    display: block;
+}
+
+/* Loading Spinner Styles */
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #4CAF50;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-spinner p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}

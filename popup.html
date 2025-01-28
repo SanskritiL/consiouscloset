@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Consious Closet</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <h2>The Consious Closet</h2>
+        
+        <button id="inject-btn" class="analyze-button">Analyze</button>
+
+        <!-- Loading Spinner -->
+        <div id="loading-spinner" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Analyzing...</p>
+        </div>
+    
+        <div class="gauge-container" style="display: none;">
+            <canvas id="gaugeChart"></canvas>
+            <div class="needle" id="gaugeNeedle"></div>
+            <p class="score-label">Eco-Friendly Score: <span id="scoreValue">0</span></p>
+        </div>
+    
+        <div class="info-section" style="display: none;">
+            <h3>Description:</h3>
+            <p id="itemDescription">...</p>
+        </div>
+    
+        <div class="info-section" style="display: none;">
+            <h3>Analysis:</h3>
+            <p id="greenwashingAnalysis">...</p>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+    <script src="chart.umd.min.js"></script>
+</body>
+</html>
