@@ -10,7 +10,8 @@
     <div class="popup-container">
         <h2>The Consious Closet</h2>
         
-        <button id="inject-btn" class="analyze-button">Analyze</button>
+        <button id="subscribe-btn" class="subscribe-button" style="display: none;">Subscribe to Analyze</button>
+        <button id="inject-btn" class="analyze-button" style="display: none;">Analyze</button>
 
         <!-- Loading Spinner -->
         <div id="loading-spinner" class="loading-spinner" style="display: none;">
@@ -35,6 +36,17 @@
         </div>
     </div>
 
+    <div class="settings-link" style="text-align: center; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+        <a href="settings.html" style="color: #666; font-size: 12px; text-decoration: none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+        </a>
+        <div style="font-size: 10px; color: #666;">Made with <span style="color: #e25555;">❤️</span> by Sans</div>
+    </div>
+
+    <script src="ExtPay.js"></script>
     <script src="popup.js"></script>
     <script src="chart.umd.min.js"></script>
 </body>

@@ -1,29 +1,33 @@
 async function analyzeFabricComposition() {
     console.log("Analyzing fabric composition...");
 
-    // Ensure environment variables are loaded
-    const azureOpenAIKey = process.env.AZURE_OPENAI_KEY;
-    const apiUrl = process.env.AZURE_API_URL;
+    // Cloudflare Worker endpoint
+    const workerUrl = "https://black-sun-7868.sanslamsal16.workers.dev/";
 
-    if (!azureOpenAIKey || !apiUrl) {
-        console.error("Error: Missing environment variables (AZURE_OPENAI_KEY or AZURE_API_URL).");
-        return null;
-    }
-
-    // Generate the prompt for analysis
-    const prompt = generatePrompt();
+    // Get the HTML content
+    const htmlContent = document.body.innerText.substring(0, 5000);
 
     try {
-        // Fetch data from the API
-        const response = await fetchData(apiUrl, azureOpenAIKey, prompt);
+        // Send request to Cloudflare Worker
+        const response = await fetch(workerUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ html_content: htmlContent }),
+        });
 
-        // Parse and validate the response
-        const parsedData = parseAndValidateResponse(response);
+        if (!response.ok) {
+            throw new Error(`Worker request failed with status ${response.status}`);
+        }
 
+        const data = await response.json();
+        
         // Send the data to the Chrome runtime
-        chrome.runtime.sendMessage({ type: "fabricData", data: parsedData });
+        chrome.runtime.sendMessage({ type: "fabricData", data });
 
-        console.log("Analysis completed successfully:", parsedData);
+        console.log("Analysis completed successfully:", data);
+        return data;
     } catch (error) {
         console.error("Error during fabric composition analysis:", error);
         return null;
@@ -67,47 +71,11 @@ ${htmlContent}
 `;
 }
 
-// Helper function to fetch data from the API
-async function fetchData(apiUrl, apiKey, prompt) {
-    const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'api-key': apiKey,
-        },
-        body: JSON.stringify({
-            messages: [{ role: 'user', content: prompt }],
-            response_format: { type: 'json_object' },
-        }),
-    });
 
-    if (!response.ok) {
-        throw new Error(`API request failed with status ${response.status}`);
+
+// Listen for messages from the popup script
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.type === "analyze") {
+        analyzeFabricComposition();
     }
-
-    return response.json();
-}
-
-// Helper function to parse and validate the API response
-function parseAndValidateResponse(response) {
-    if (!response.choices || !response.choices[0] || !response.choices[0].message.content) {
-        throw new Error("Invalid API response format");
-    }
-
-    const parsedData = JSON.parse(response.choices[0].message.content);
-
-    // Validate the parsed data structure
-    if (
-        !parsedData.materials ||
-        !parsedData.description ||
-        !parsedData.analysis ||
-        parsedData.score === undefined
-    ) {
-        throw new Error("Invalid data structure in API response");
-    }
-
-    return parsedData;
-}
-
-// Execute the function
-analyzeFabricComposition();
+});

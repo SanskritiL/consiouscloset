@@ -1,0 +1,75 @@
+# The Almanack of Naval Ravikant - Mind Map
+
+## Central Idea 1: Wealth
+- ### Main Branch 1.1: Building Wealth
+  - #### Sub-branch 1.1.1: Specific Knowledge
+    - Find and develop unique skills that are rare and valuable
+    - Focus on what you’re naturally good at and enjoy
+  - #### Sub-branch 1.1.2: Leverage
+    - Use tools, technology, and people to amplify your efforts
+    - Types: Code, media, capital, labor
+  - #### Sub-branch 1.1.3: Ownership
+    - Equity in a business > trading time for money
+    - Long-term thinking over short-term gains
+  - #### Sub-branch 1.1.4: Compounding
+    - Wealth grows over time like compound interest
+    - Patience and persistence are key
+- ### Main Branch 1.2: Work & Career
+  - #### Sub-branch 1.2.1: Play Long-Term Games
+    - Work with people you like, on problems you care about
+    - Reputation and trust build over decades
+  - #### Sub-branch 1.2.2: Avoid Renting Time
+    - Don’t trade hours for dollars indefinitely
+    - Aim for autonomy and scalability
+  - #### Sub-branch 1.2.3: Judgment
+    - Decision-making skills > effort alone
+    - Learn to think clearly and prioritize
+
+## Central Idea 2: Happiness
+- ### Main Branch 2.1: Internal Happiness
+  - #### Sub-branch 2.1.1: Desire Management
+    - “Desire is a contract to be unhappy until you get it”
+    - Reduce wants to increase peace
+  - #### Sub-branch 2.1.2: Mindfulness
+    - Meditation and presence improve mental clarity
+    - Focus on the moment, not past or future
+  - #### Sub-branch 2.1.3: Perspective
+    - Happiness is a choice and a skill
+    - Reframe problems as opportunities
+- ### Main Branch 2.2: Freedom
+  - #### Sub-branch 2.2.1: Time Freedom
+    - Wealth’s true value is buying time
+    - Say no to things that don’t serve you
+  - #### Sub-branch 2.2.2: Mental Freedom
+    - Let go of anger, envy, and attachment
+    - Inner peace > external validation
+- ### Main Branch 2.3: Habits for Happiness
+  - #### Sub-branch 2.3.1: Reading
+    - Learn from books, not just experience
+    - Focus on foundational ideas
+  - #### Sub-branch 2.3.2: Health
+    - Exercise and diet as foundations
+    - Energy drives clarity and contentment
+
+## Central Idea 3: Philosophy of Life
+- ### Main Branch 3.1: Meaning & Purpose
+  - #### Sub-branch 3.1.1: No Ultimate Meaning
+    - Life has no predefined purpose—create your own
+    - Embrace the mystery of existence
+  - #### Sub-branch 3.1.2: Self-Actualization
+    - Pursue what fulfills you personally
+    - Be true to yourself over societal norms
+- ### Main Branch 3.2: Thinking & Learning
+  - #### Sub-branch 3.2.1: First Principles
+    - Break things down to basics, then reason up
+    - Avoid blind conformity
+  - #### Sub-branch 3.2.2: Lifelong Learning
+    - Curiosity > formal education
+    - Learn to love learning
+- ### Main Branch 3.3: Relationships
+  - #### Sub-branch 3.3.1: Choose Wisely
+    - Surround yourself with positive, growth-oriented people
+    - Cut toxic ties
+  - #### Sub-branch 3.3.2: Authenticity
+    - Be yourself fully—don’t wear masks
+    - Honest communication builds trust

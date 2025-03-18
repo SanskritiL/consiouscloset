@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - The Consious Closet</title>
+    <link rel="stylesheet" href="popup.css">
+    <style>
+        .settings-container {
+            padding: 20px;
+            min-width: 300px;
+        }
+        .subscription-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+        .subscription-info {
+            margin-bottom: 15px;
+        }
+        .cancel-subscription {
+            color: #666;
+            text-decoration: underline;
+            background: none;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .cancel-subscription:hover {
+            color: #ff4444;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #666;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="settings-container">
+        <a href="popup.html" class="back-link">← Back to Analysis</a>
+        <h2>Subscription Settings</h2>
+        
+        <div class="subscription-section">
+            <div class="subscription-info">
+                <h3>Your Subscription</h3>
+                <p id="subscriptionStatus">Loading subscription status...</p>
+            </div>
+            <button id="cancelSubscription" class="cancel-subscription">Cancel Subscription</button>
+        </div>
+    </div>
+
+    <script src="ExtPay.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>
